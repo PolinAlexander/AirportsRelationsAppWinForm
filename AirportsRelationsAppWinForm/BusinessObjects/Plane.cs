@@ -1,7 +1,6 @@
 ﻿using System;
-using System.Linq;
-using System.Text;
 using DevExpress.Xpo;
+using DevExpress.Persistent.Validation;
 
 namespace AirportsRelationsApp.Module.BusinessObjects
 {
@@ -12,7 +11,7 @@ namespace AirportsRelationsApp.Module.BusinessObjects
 
         public Plane(Session session) : base(session) { }
         [Size(4096)]
-        //[RuleRequiredField]
+        [RuleRequiredField]
         public string PlaneName
         {
             get { return planeName; }

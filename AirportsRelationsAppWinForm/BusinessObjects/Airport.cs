@@ -1,14 +1,12 @@
-﻿using System;
-using System.Linq;
-using System.Text;
-using DevExpress.Xpo;
+﻿using DevExpress.Xpo;
+using DevExpress.Persistent.Validation;
 
 namespace AirportsRelationsApp.Module.BusinessObjects
 {
     public class Airport : XPObject
     {
         private string airportName;
-        //[RuleRequiredField]
+        [RuleRequiredField]
         public string AirportName
         {
             get { return airportName; }
