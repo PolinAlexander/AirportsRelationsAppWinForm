@@ -29,15 +29,16 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            DevExpress.XtraEditors.TableLayout.ItemTemplateBase itemTemplateBase1 = new DevExpress.XtraEditors.TableLayout.ItemTemplateBase();
             this.insertSimpleButton = new DevExpress.XtraEditors.SimpleButton();
             this.modifySimpleButton = new DevExpress.XtraEditors.SimpleButton();
             this.DeleteSimpleButton = new DevExpress.XtraEditors.SimpleButton();
             this.listBox1 = new DevExpress.XtraEditors.ListBoxControl();
-            this.xpCollection1 = new DevExpress.Xpo.XPCollection(this.components);
             this.session1 = new DevExpress.Xpo.Session(this.components);
+            this.xpCollection1 = new DevExpress.Xpo.XPCollection(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.listBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.xpCollection1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.session1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.xpCollection1)).BeginInit();
             this.SuspendLayout();
             // 
             // insertSimpleButton
@@ -47,6 +48,7 @@
             this.insertSimpleButton.Size = new System.Drawing.Size(94, 29);
             this.insertSimpleButton.TabIndex = 0;
             this.insertSimpleButton.Text = "Insert";
+            this.insertSimpleButton.Click += new System.EventHandler(this.InsertSimpleButton_Click);
             // 
             // modifySimpleButton
             // 
@@ -71,6 +73,8 @@
             this.listBox1.Name = "listBox1";
             this.listBox1.Size = new System.Drawing.Size(774, 388);
             this.listBox1.TabIndex = 3;
+            itemTemplateBase1.Name = "template1";
+            this.listBox1.Templates.Add(itemTemplateBase1);
             // 
             // xpCollection1
             // 
@@ -89,8 +93,8 @@
             this.Name = "FormListPlane";
             this.Text = "List Airports";
             ((System.ComponentModel.ISupportInitialize)(this.listBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.xpCollection1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.session1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.xpCollection1)).EndInit();
             this.ResumeLayout(false);
 
         }

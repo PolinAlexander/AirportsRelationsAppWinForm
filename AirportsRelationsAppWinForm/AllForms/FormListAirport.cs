@@ -8,6 +8,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using DevExpress.XtraEditors;
+using DevExpress.XtraLayout;
+using DevExpress.XtraLayout.Helpers;
 
 namespace AirportsRelationsAppWinForm
 {
@@ -15,8 +18,7 @@ namespace AirportsRelationsAppWinForm
     {
         public FormListAirport()
         {
-            InitializeComponent();
-            //listBox1.DataSource = xpCollection1.LoadAsync();
+            InitializeComponent();            
         }
 
         private void InsertSimpleButton_Click(object sender, EventArgs e)

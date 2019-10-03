@@ -157,3 +157,4 @@ D:\VSCode\AirportsRelationsApp\AirportsRelationsAppWinForm\AirportsRelationsAppW
 D:\VSCode\AirportsRelationsApp\AirportsRelationsAppWinForm\AirportsRelationsAppWinForm\AirportsRelationsAppWinForm\bin\Debug\es\DevExpress.PivotGrid.v19.1.Core.resources.dll
 D:\VSCode\AirportsRelationsApp\AirportsRelationsAppWinForm\AirportsRelationsAppWinForm\AirportsRelationsAppWinForm\bin\Debug\ja\DevExpress.PivotGrid.v19.1.Core.resources.dll
 D:\VSCode\AirportsRelationsApp\AirportsRelationsAppWinForm\AirportsRelationsAppWinForm\AirportsRelationsAppWinForm\bin\Debug\ru\DevExpress.PivotGrid.v19.1.Core.resources.dll
+D:\VSCode\AirportsRelationsApp\AirportsRelationsAppWinForm\AirportsRelationsAppWinForm\AirportsRelationsAppWinForm\obj\Debug\AirportsRelationsAppWinForm.Form1.resources
