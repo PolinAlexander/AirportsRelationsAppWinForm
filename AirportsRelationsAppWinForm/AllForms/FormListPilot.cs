@@ -16,5 +16,10 @@ namespace AirportsRelationsAppWinForm
         {
             InitializeComponent();
         }
+
+        private void InsertSimpleButton_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

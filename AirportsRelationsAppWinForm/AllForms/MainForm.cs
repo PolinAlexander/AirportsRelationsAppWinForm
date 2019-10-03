@@ -21,11 +21,25 @@ namespace AirportsRelationsAppWinForm.AllForms
         public MainForm()
         {
             InitializeComponent();
-        }        
+        }
 
-        private void GridControl1_Click(object sender, EventArgs e)
+        private void BarButtonItem6_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {            
+            FormListAirport airForm = new FormListAirport();
+            airForm.Show();
+
+        }
+
+        private void BarButtonItem7_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
+            FormListPlane planeForm = new FormListPlane();
+            planeForm.Show();
+        }
 
+        private void BarButtonItem8_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            FormListPilot pilotForm = new FormListPilot();
+            pilotForm.Show();
         }
     }
 }

@@ -28,45 +28,53 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.insertSimpleButton = new DevExpress.XtraEditors.SimpleButton();
             this.modifySimpleButton = new DevExpress.XtraEditors.SimpleButton();
             this.DeleteSimpleButton = new DevExpress.XtraEditors.SimpleButton();
             this.listBox1 = new DevExpress.XtraEditors.ListBoxControl();
+            this.xpCollection1 = new DevExpress.Xpo.XPCollection(this.components);
+            this.session1 = new DevExpress.Xpo.Session(this.components);
+            ((System.ComponentModel.ISupportInitialize)(this.listBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.xpCollection1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.session1)).BeginInit();
             this.SuspendLayout();
             // 
-            // simpleButton1
+            // insertSimpleButton
             // 
             this.insertSimpleButton.Location = new System.Drawing.Point(13, 409);
-            this.insertSimpleButton.Name = "simpleButton1";
+            this.insertSimpleButton.Name = "insertSimpleButton";
             this.insertSimpleButton.Size = new System.Drawing.Size(94, 29);
             this.insertSimpleButton.TabIndex = 0;
             this.insertSimpleButton.Text = "Insert";
+            this.insertSimpleButton.Click += new System.EventHandler(this.InsertSimpleButton_Click);
             // 
-            // simpleButton2
+            // modifySimpleButton
             // 
             this.modifySimpleButton.Location = new System.Drawing.Point(353, 409);
-            this.modifySimpleButton.Name = "simpleButton2";
+            this.modifySimpleButton.Name = "modifySimpleButton";
             this.modifySimpleButton.Size = new System.Drawing.Size(94, 29);
             this.modifySimpleButton.TabIndex = 1;
             this.modifySimpleButton.Text = "Modify";
             // 
-            // simpleButton3
+            // DeleteSimpleButton
             // 
             this.DeleteSimpleButton.Location = new System.Drawing.Point(693, 409);
-            this.DeleteSimpleButton.Name = "simpleButton3";
+            this.DeleteSimpleButton.Name = "DeleteSimpleButton";
             this.DeleteSimpleButton.Size = new System.Drawing.Size(94, 29);
             this.DeleteSimpleButton.TabIndex = 2;
             this.DeleteSimpleButton.Text = "Delete";
             // 
             // listBox1
-            //             
+            // 
+            this.listBox1.DataSource = this.xpCollection1;
             this.listBox1.ItemHeight = 16;
             this.listBox1.Location = new System.Drawing.Point(13, 13);
             this.listBox1.Name = "listBox1";
             this.listBox1.Size = new System.Drawing.Size(774, 388);
             this.listBox1.TabIndex = 3;
             // 
-            // FormListAirport
+            // FormListPilot
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -75,8 +83,11 @@
             this.Controls.Add(this.DeleteSimpleButton);
             this.Controls.Add(this.modifySimpleButton);
             this.Controls.Add(this.insertSimpleButton);
-            this.Name = "FormListAirport";
+            this.Name = "FormListPilot";
             this.Text = "List Airports";
+            ((System.ComponentModel.ISupportInitialize)(this.listBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.xpCollection1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.session1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -87,5 +98,7 @@
         private DevExpress.XtraEditors.SimpleButton modifySimpleButton;
         private DevExpress.XtraEditors.SimpleButton DeleteSimpleButton;
         private DevExpress.XtraEditors.ListBoxControl listBox1;
+        private DevExpress.Xpo.XPCollection xpCollection1;
+        private DevExpress.Xpo.Session session1;
     }
 }
