@@ -1,4 +1,4 @@
-﻿namespace AirportsRelationsAppWinForm
+﻿namespace AirportsRelationsAppWinForm.AllForms
 {
     partial class MainForm
     {
@@ -20,7 +20,7 @@
             base.Dispose(disposing);
         }
 
-        #region Windows Form Designer generated code
+        #region Component Designer generated code
 
         /// <summary>
         /// Required method for Designer support - do not modify
@@ -28,121 +28,154 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
-            this.xpCollection1 = new DevExpress.Xpo.XPCollection(this.components);
-            this.session1 = new DevExpress.Xpo.Session(this.components);
-            this.ribbonControl1 = new DevExpress.XtraBars.Ribbon.RibbonControl();
-            this.barButtonItem1 = new DevExpress.XtraBars.BarButtonItem();
-            this.ribbonPage1 = new DevExpress.XtraBars.Ribbon.RibbonPage();
-            this.ribbonPageGroup1 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
-            this.ribbonPageGroup2 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
-            this.ribbonStatusBar1 = new DevExpress.XtraBars.Ribbon.RibbonStatusBar();
-            this.ribbonPage2 = new DevExpress.XtraBars.Ribbon.RibbonPage();
-            this.button1 = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.xpCollection1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.session1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ribbonControl1)).BeginInit();
+            this.dataLayoutControl1 = new DevExpress.XtraDataLayout.DataLayoutControl();
+            this.layoutControlGroup1 = new DevExpress.XtraLayout.LayoutControlGroup();
+            this.mainRibbonControl = new DevExpress.XtraBars.Ribbon.RibbonControl();
+            this.bbiSave = new DevExpress.XtraBars.BarButtonItem();
+            this.bbiSaveAndClose = new DevExpress.XtraBars.BarButtonItem();
+            this.bbiSaveAndNew = new DevExpress.XtraBars.BarButtonItem();
+            this.bbiReset = new DevExpress.XtraBars.BarButtonItem();
+            this.bbiDelete = new DevExpress.XtraBars.BarButtonItem();
+            this.bbiClose = new DevExpress.XtraBars.BarButtonItem();
+            this.mainRibbonPage = new DevExpress.XtraBars.Ribbon.RibbonPage();
+            this.mainRibbonPageGroup = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
+            ((System.ComponentModel.ISupportInitialize)(this.dataLayoutControl1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.mainRibbonControl)).BeginInit();
             this.SuspendLayout();
-            // 
-            // xpCollection1
-            // 
-            this.xpCollection1.ObjectType = typeof(AirportsRelationsApp.Module.BusinessObjects.Airport);
-            this.xpCollection1.Session = this.session1;
-            // 
-            // ribbonControl1
-            // 
-            this.ribbonControl1.ExpandCollapseItem.Id = 0;
-            this.ribbonControl1.Items.AddRange(new DevExpress.XtraBars.BarItem[] {
-            this.ribbonControl1.ExpandCollapseItem,
-            this.ribbonControl1.SearchEditItem,
-            this.barButtonItem1});
-            this.ribbonControl1.Location = new System.Drawing.Point(0, 0);
-            this.ribbonControl1.MaxItemId = 2;
-            this.ribbonControl1.Name = "ribbonControl1";
-            this.ribbonControl1.Pages.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPage[] {
-            this.ribbonPage1});
-            this.ribbonControl1.Size = new System.Drawing.Size(700, 178);
-            this.ribbonControl1.StatusBar = this.ribbonStatusBar1;
-            // 
-            // barButtonItem1
-            // 
-            this.barButtonItem1.Caption = "listAirportsBarButtonItem1";
-            this.barButtonItem1.Id = 1;
-            this.barButtonItem1.Name = "barButtonItem1";
-            this.barButtonItem1.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.BarButtonItem1_ItemClick);
-            // 
-            // ribbonPage1
-            // 
-            this.ribbonPage1.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
-            this.ribbonPageGroup1,
-            this.ribbonPageGroup2});
-            this.ribbonPage1.Name = "ribbonPage1";
-            this.ribbonPage1.Text = "ribbonPage1";
-            // 
-            // ribbonPageGroup1
-            // 
-            this.ribbonPageGroup1.ItemLinks.Add(this.barButtonItem1);
-            this.ribbonPageGroup1.Name = "ribbonPageGroup1";
-            this.ribbonPageGroup1.Text = "ribbonPageGroup1";
-            // 
-            // ribbonPageGroup2
-            // 
-            this.ribbonPageGroup2.Name = "ribbonPageGroup2";
-            this.ribbonPageGroup2.Text = "ribbonPageGroup2";
-            // 
-            // ribbonStatusBar1
-            // 
-            this.ribbonStatusBar1.Location = new System.Drawing.Point(0, 413);
-            this.ribbonStatusBar1.Name = "ribbonStatusBar1";
-            this.ribbonStatusBar1.Ribbon = this.ribbonControl1;
-            this.ribbonStatusBar1.Size = new System.Drawing.Size(700, 37);
-            // 
-            // ribbonPage2
-            // 
-            this.ribbonPage2.Name = "ribbonPage2";
-            this.ribbonPage2.Text = "ribbonPage2";
-            // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(56, 243);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(197, 74);
-            this.button1.TabIndex = 2;
-            this.button1.Text = "button1";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.Button1_Click);
-            // 
-            // MainForm
-            // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
+            //
+            // dataLayoutControl1
+            //
+            this.dataLayoutControl1.AllowCustomization = false;
+            this.dataLayoutControl1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dataLayoutControl1.Location = new System.Drawing.Point(0, 116);
+            this.dataLayoutControl1.Name = "dataLayoutControl1";
+            this.dataLayoutControl1.Root = this.layoutControlGroup1;
+            this.dataLayoutControl1.Size = new System.Drawing.Size(800, 484);
+            this.dataLayoutControl1.TabIndex = 0;
+            //
+            // layoutControlGroup1
+            //
+            this.layoutControlGroup1.EnableIndentsWithoutBorders = DevExpress.Utils.DefaultBoolean.True;
+            this.layoutControlGroup1.GroupBordersVisible = false;
+            this.layoutControlGroup1.Location = new System.Drawing.Point(0, 0);
+            this.layoutControlGroup1.Name = "Root";
+            this.layoutControlGroup1.Size = new System.Drawing.Size(800, 484);
+            this.layoutControlGroup1.TextVisible = false;
+            //
+            // mainRibbonControl
+            //
+            this.mainRibbonControl.ExpandCollapseItem.Id = 0;
+            this.mainRibbonControl.Items.AddRange(new DevExpress.XtraBars.BarItem[] {
+                    this.mainRibbonControl.ExpandCollapseItem,
+                    this.bbiSave,
+                    this.bbiSaveAndClose,
+                    this.bbiSaveAndNew,
+                    this.bbiReset,
+                    this.bbiDelete,
+                    this.bbiClose});
+            this.mainRibbonControl.Location = new System.Drawing.Point(0, 0);
+            this.mainRibbonControl.MaxItemId = 10;
+            this.mainRibbonControl.Name = "mainRibbonControl";
+            this.mainRibbonControl.Pages.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPage[] {
+                    this.mainRibbonPage});
+            this.mainRibbonControl.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonControlStyle.Office2013;
+            this.mainRibbonControl.ShowApplicationButton = DevExpress.Utils.DefaultBoolean.False;
+            this.mainRibbonControl.Size = new System.Drawing.Size(800, 116);
+            this.mainRibbonControl.ToolbarLocation = DevExpress.XtraBars.Ribbon.RibbonQuickAccessToolbarLocation.Hidden;
+            //
+            // bbiSave
+            //
+            this.bbiSave.Caption = "Save";
+            this.bbiSave.Id = 2;
+            this.bbiSave.ImageUri.Uri = "Save";
+            this.bbiSave.Name = "bbiSave";
+            //
+            // bbiSaveAndClose
+            //
+            this.bbiSaveAndClose.Caption = "Save And Close";
+            this.bbiSaveAndClose.Id = 3;
+            this.bbiSaveAndClose.ImageUri.Uri = "SaveAndClose";
+            this.bbiSaveAndClose.Name = "bbiSaveAndClose";
+            //
+            // bbiSaveAndNew
+            //
+            this.bbiSaveAndNew.Caption = "Save And New";
+            this.bbiSaveAndNew.Id = 4;
+            this.bbiSaveAndNew.ImageUri.Uri = "SaveAndNew";
+            this.bbiSaveAndNew.Name = "bbiSaveAndNew";
+            //
+            // bbiReset
+            //
+            this.bbiReset.Caption = "Reset Changes";
+            this.bbiReset.Id = 5;
+            this.bbiReset.ImageUri.Uri = "Reset";
+            this.bbiReset.Name = "bbiReset";
+            //
+            // bbiDelete
+            //
+            this.bbiDelete.Caption = "Delete";
+            this.bbiDelete.Id = 6;
+            this.bbiDelete.ImageUri.Uri = "Delete";
+            this.bbiDelete.Name = "bbiDelete";
+            //
+            // bbiClose
+            //
+            this.bbiClose.Caption = "Close";
+            this.bbiClose.Id = 7;
+            this.bbiClose.ImageUri.Uri = "Close";
+            this.bbiClose.Name = "bbiClose";
+            //
+            // mainRibbonPage
+            //
+            this.mainRibbonPage.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
+                    this.mainRibbonPageGroup});
+            this.mainRibbonPage.MergeOrder = 0;
+            this.mainRibbonPage.Name = "mainRibbonPage";
+            this.mainRibbonPage.Text = "Home";
+            //
+            // mainRibbonPageGroup
+            //
+            this.mainRibbonPageGroup.AllowTextClipping = false;
+            this.mainRibbonPageGroup.ItemLinks.Add(this.bbiSave);
+            this.mainRibbonPageGroup.ItemLinks.Add(this.bbiSaveAndClose);
+            this.mainRibbonPageGroup.ItemLinks.Add(this.bbiSaveAndNew);
+            this.mainRibbonPageGroup.ItemLinks.Add(this.bbiReset);
+            this.mainRibbonPageGroup.ItemLinks.Add(this.bbiDelete);
+            this.mainRibbonPageGroup.ItemLinks.Add(this.bbiClose);
+            this.mainRibbonPageGroup.Name = "mainRibbonPageGroup";
+            this.mainRibbonPageGroup.ShowCaptionButton = false;
+            this.mainRibbonPageGroup.Text = "Tasks";
+            //
+            // Tabbed
+            //
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(700, 450);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.ribbonStatusBar1);
-            this.Controls.Add(this.ribbonControl1);
-            this.Name = "MainForm";
-            this.Ribbon = this.ribbonControl1;
-            this.StatusBar = this.ribbonStatusBar1;
-            this.Text = "Form1";
-            this.Load += new System.EventHandler(this.MainForm_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.xpCollection1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.session1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ribbonControl1)).EndInit();
+            this.AutoValidate = System.Windows.Forms.AutoValidate.EnableAllowFocusChange;
+            this.Controls.Add(this.dataLayoutControl1);
+            this.Controls.Add(this.mainRibbonControl);
+            this.Name = "Tabbed";
+            this.Size = new System.Drawing.Size(800, 600);
+            ((System.ComponentModel.ISupportInitialize)(this.dataLayoutControl1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.mainRibbonControl)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-        private DevExpress.Xpo.XPCollection xpCollection1;
-        private DevExpress.Xpo.Session session1;
-        private DevExpress.XtraBars.Ribbon.RibbonControl ribbonControl1;
-        private DevExpress.XtraBars.Ribbon.RibbonPage ribbonPage1;
-        private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup1;
-        private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup2;
-        private DevExpress.XtraBars.Ribbon.RibbonStatusBar ribbonStatusBar1;
-        private DevExpress.XtraBars.Ribbon.RibbonPage ribbonPage2;
-        private DevExpress.XtraBars.BarButtonItem barButtonItem1;
-        private System.Windows.Forms.Button button1;
+
+        private DevExpress.XtraDataLayout.DataLayoutControl dataLayoutControl1;
+        private DevExpress.XtraLayout.LayoutControlGroup layoutControlGroup1;
+        private DevExpress.XtraBars.Ribbon.RibbonControl mainRibbonControl;
+        private DevExpress.XtraBars.Ribbon.RibbonPage mainRibbonPage;
+        private DevExpress.XtraBars.Ribbon.RibbonPageGroup mainRibbonPageGroup;
+        private DevExpress.XtraBars.BarButtonItem bbiSave;
+        private DevExpress.XtraBars.BarButtonItem bbiSaveAndClose;
+        private DevExpress.XtraBars.BarButtonItem bbiSaveAndNew;
+        private DevExpress.XtraBars.BarButtonItem bbiReset;
+        private DevExpress.XtraBars.BarButtonItem bbiDelete;
+        private DevExpress.XtraBars.BarButtonItem bbiClose;
     }
 }
