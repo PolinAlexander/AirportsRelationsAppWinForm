@@ -103,6 +103,36 @@ namespace AirportsRelationsAppWinForm.Properties {
         /// <summary>
         ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap add_16x164 {
+            get {
+                object obj = ResourceManager.GetObject("add_16x164", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap add_16x165 {
+            get {
+                object obj = ResourceManager.GetObject("add_16x165", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap add_16x166 {
+            get {
+                object obj = ResourceManager.GetObject("add_16x166", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap add_32x32 {
             get {
                 object obj = ResourceManager.GetObject("add_32x32", resourceCulture);
@@ -136,6 +166,36 @@ namespace AirportsRelationsAppWinForm.Properties {
         internal static System.Drawing.Bitmap add_32x323 {
             get {
                 object obj = ResourceManager.GetObject("add_32x323", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap add_32x324 {
+            get {
+                object obj = ResourceManager.GetObject("add_32x324", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap add_32x325 {
+            get {
+                object obj = ResourceManager.GetObject("add_32x325", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap add_32x326 {
+            get {
+                object obj = ResourceManager.GetObject("add_32x326", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

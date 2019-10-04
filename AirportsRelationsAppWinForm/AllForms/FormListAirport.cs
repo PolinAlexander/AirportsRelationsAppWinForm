@@ -33,9 +33,13 @@ namespace AirportsRelationsAppWinForm
             var namePilot = plForm.comboBoxEdit2.ToString();
             var pilot = xpCollection1.OfType<Pilot>().FirstOrDefault(n => n.ToString() == namePilot);
             airport.Pilots.Add(pilot);
-            xpCollection1.Add(airport);
-            session1.Save(airport);
-            MessageBox.Show($"Added new airport - {airport.AirportName}");
+            if (result == DialogResult.OK)
+            {
+                if (string.IsNullOrEmpty(pilot.PilotName)) { throw new ArgumentException("Field cannot be empty", "PilotName"); }
+                xpCollection1.Add(airport);
+                session1.Save(airport);
+                MessageBox.Show($"Added new airport - {airport.AirportName}");
+            }
 
         }
     }

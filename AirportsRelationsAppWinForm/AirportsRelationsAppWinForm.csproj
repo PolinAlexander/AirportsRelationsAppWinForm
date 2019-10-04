@@ -62,6 +62,17 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AirportsRelationsWFDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>AirportsRelationsWFDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="AllForms\Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AllForms\Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
     <Compile Include="AllForms\SelectAiports.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -91,6 +102,12 @@
     </Compile>
     <Compile Include="AllForms\SelectPilotsFromAirportsA.Designer.cs">
       <DependentUpon>SelectPilotsFromAirportsA.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AllForms\SelectPilotWIthP.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AllForms\SelectPilotWIthP.Designer.cs">
+      <DependentUpon>SelectPilotWIthP.cs</DependentUpon>
     </Compile>
     <Compile Include="AllForms\SelectPlainInAirportA.cs">
       <SubType>Form</SubType>
@@ -133,6 +150,9 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="AllForms\Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="AllForms\SelectAiports.resx">
       <DependentUpon>SelectAiports.cs</DependentUpon>
     </EmbeddedResource>
@@ -160,6 +180,9 @@
     <EmbeddedResource Include="AllForms\SelectPilotsFromAirportsA.resx">
       <DependentUpon>SelectPilotsFromAirportsA.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="AllForms\SelectPilotWIthP.resx">
+      <DependentUpon>SelectPilotWIthP.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="AllForms\SelectPlainInAirportA.resx">
       <DependentUpon>SelectPlainInAirportA.cs</DependentUpon>
     </EmbeddedResource>
@@ -177,6 +200,17 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <None Include="AirportsRelationsWFDataSet.xsc">
+      <DependentUpon>AirportsRelationsWFDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="AirportsRelationsWFDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>AirportsRelationsWFDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="AirportsRelationsWFDataSet.xss">
+      <DependentUpon>AirportsRelationsWFDataSet.xsd</DependentUpon>
+    </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -208,6 +242,12 @@
     <None Include="Resources\add_16x163.png" />
     <None Include="Resources\editdatasource_32x32.png" />
     <None Include="Resources\editdatasource_16x16.png" />
+    <None Include="Resources\add_32x324.png" />
+    <None Include="Resources\add_16x164.png" />
+    <None Include="Resources\add_32x325.png" />
+    <None Include="Resources\add_16x165.png" />
+    <None Include="Resources\add_32x326.png" />
+    <None Include="Resources\add_16x166.png" />
     <Content Include="TaskForTestCSharpDeveloper.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
