@@ -47,10 +47,9 @@ namespace AirportsRelationsAppWinForm
             {
                 if (string.IsNullOrEmpty(pilot.PilotName)) { throw new ArgumentException("Field cannot be empty", "PilotName"); }
                 xpCollection1.Add(pilot);
+                session1.Save(pilot);
                 MessageBox.Show($"Added new pilot - {pilot.PilotName}");
-            }
-            
-        }
-        
+            }            
+        }        
     }
 }

@@ -82,7 +82,7 @@
             customSqlQuery1.Name = "Query";
             customSqlQuery1.Sql = "SELECT [PilotName]\r\nFROM [AirportsRelationsWF].[dbo].[Airport] AS air\r\nINNER JOIN" +
     " [AirportsRelationsWF].[dbo].[Pilot] AS p\r\nON p.[Airport] = air.[OID]\r\nWHERE [Ai" +
-    "rportName] = \'A\';";
+    "rportName] LIKE \'a%\';";
             this.sqlDataSource1.Queries.AddRange(new DevExpress.DataAccess.Sql.SqlQuery[] {
             customSqlQuery1});
             this.sqlDataSource1.ResultSchemaSerializable = "PERhdGFTZXQgTmFtZT0ic3FsRGF0YVNvdXJjZTEiPjxWaWV3IE5hbWU9IlF1ZXJ5Ij48RmllbGQgTmFtZ" +

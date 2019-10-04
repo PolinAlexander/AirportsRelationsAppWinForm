@@ -56,7 +56,7 @@
             this.modifySimpleButton.Name = "modifySimpleButton";
             this.modifySimpleButton.Size = new System.Drawing.Size(94, 29);
             this.modifySimpleButton.TabIndex = 1;
-            this.modifySimpleButton.Text = "Modify";            
+            this.modifySimpleButton.Text = "Modify";
             // 
             // DeleteSimpleButton
             // 
@@ -104,7 +104,7 @@
             this.Controls.Add(this.insertSimpleButton);
             this.ForeColor = System.Drawing.Color.Black;
             this.Name = "FormListPlane";
-            this.Text = "List Planes";            
+            this.Text = "List Planes";
             ((System.ComponentModel.ISupportInitialize)(this.session1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.xpCollection1)).EndInit();

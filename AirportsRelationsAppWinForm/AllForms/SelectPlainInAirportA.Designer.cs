@@ -29,11 +29,13 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            DevExpress.DataAccess.Sql.CustomSqlQuery customSqlQuery1 = new DevExpress.DataAccess.Sql.CustomSqlQuery();
+            DevExpress.DataAccess.Sql.CustomSqlQuery customSqlQuery4 = new DevExpress.DataAccess.Sql.CustomSqlQuery();
+            DevExpress.DataAccess.Sql.CustomSqlQuery customSqlQuery3 = new DevExpress.DataAccess.Sql.CustomSqlQuery();
             this.gridControl1 = new DevExpress.XtraGrid.GridControl();
-            this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.sqlDataSource1 = new DevExpress.DataAccess.Sql.SqlDataSource(this.components);
+            this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.colPlaneName = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.sqlDataSource2 = new DevExpress.DataAccess.Sql.SqlDataSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
             this.SuspendLayout();
@@ -41,7 +43,7 @@
             // gridControl1
             // 
             this.gridControl1.DataMember = "Query";
-            this.gridControl1.DataSource = this.sqlDataSource1;
+            this.gridControl1.DataSource = this.sqlDataSource2;
             this.gridControl1.Location = new System.Drawing.Point(12, 12);
             this.gridControl1.MainView = this.gridView1;
             this.gridControl1.Name = "gridControl1";
@@ -50,25 +52,25 @@
             this.gridControl1.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView1});
             // 
+            // sqlDataSource1
+            // 
+            this.sqlDataSource1.ConnectionName = "AirportsRelationsWF";
+            this.sqlDataSource1.Name = "sqlDataSource1";
+            customSqlQuery4.Name = "Query";
+            customSqlQuery4.Sql = "SELECT [PlaneName]\r\nFROM [AirportsRelationsWF].[dbo].[Airport] AS air\r\nINNER JOIN" +
+    " [AirportsRelationsWF].[dbo].[Plane] AS p\r\nON p.[Airport] = air.[OID]\r\nWHERE [Ai" +
+    "rportName] = \'A\';";
+            this.sqlDataSource1.Queries.AddRange(new DevExpress.DataAccess.Sql.SqlQuery[] {
+            customSqlQuery4});
+            this.sqlDataSource1.ResultSchemaSerializable = "PERhdGFTZXQgTmFtZT0ic3FsRGF0YVNvdXJjZTEiPjxWaWV3IE5hbWU9IlF1ZXJ5Ij48RmllbGQgTmFtZ" +
+    "T0iUGxhbmVOYW1lIiBUeXBlPSJTdHJpbmciIC8+PC9WaWV3PjwvRGF0YVNldD4=";
+            // 
             // gridView1
             // 
             this.gridView1.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
             this.colPlaneName});
             this.gridView1.GridControl = this.gridControl1;
             this.gridView1.Name = "gridView1";
-            // 
-            // sqlDataSource1
-            // 
-            this.sqlDataSource1.ConnectionName = "AirportsRelationsWF";
-            this.sqlDataSource1.Name = "sqlDataSource1";
-            customSqlQuery1.Name = "Query";
-            customSqlQuery1.Sql = "SELECT [PlaneName]\r\nFROM [AirportsRelationsWF].[dbo].[Airport] AS air\r\nINNER JOIN" +
-    " [AirportsRelationsWF].[dbo].[Plane] AS p\r\nON p.[Airport] = air.[OID]\r\nWHERE [Ai" +
-    "rportName] = \'A\';";
-            this.sqlDataSource1.Queries.AddRange(new DevExpress.DataAccess.Sql.SqlQuery[] {
-            customSqlQuery1});
-            this.sqlDataSource1.ResultSchemaSerializable = "PERhdGFTZXQgTmFtZT0ic3FsRGF0YVNvdXJjZTEiPjxWaWV3IE5hbWU9IlF1ZXJ5Ij48RmllbGQgTmFtZ" +
-    "T0iUGxhbmVOYW1lIiBUeXBlPSJTdHJpbmciIC8+PC9WaWV3PjwvRGF0YVNldD4=";
             // 
             // colPlaneName
             // 
@@ -78,6 +80,19 @@
             this.colPlaneName.Visible = true;
             this.colPlaneName.VisibleIndex = 0;
             this.colPlaneName.Width = 94;
+            // 
+            // sqlDataSource2
+            // 
+            this.sqlDataSource2.ConnectionName = "AirportsRelationsWF";
+            this.sqlDataSource2.Name = "sqlDataSource2";
+            customSqlQuery3.Name = "Query";
+            customSqlQuery3.Sql = "SELECT [PlaneName]\r\nFROM [AirportsRelationsWF].[dbo].[Airport] AS air\r\nINNER JOIN" +
+    " [AirportsRelationsWF].[dbo].[Plane] AS p\r\nON p.[Airport] = air.[OID]\r\nWHERE [Ai" +
+    "rportName] LIKE \'a%\';";
+            this.sqlDataSource2.Queries.AddRange(new DevExpress.DataAccess.Sql.SqlQuery[] {
+            customSqlQuery3});
+            this.sqlDataSource2.ResultSchemaSerializable = "PERhdGFTZXQgTmFtZT0ic3FsRGF0YVNvdXJjZTIiPjxWaWV3IE5hbWU9IlF1ZXJ5Ij48RmllbGQgTmFtZ" +
+    "T0iUGxhbmVOYW1lIiBUeXBlPSJTdHJpbmciIC8+PC9WaWV3PjwvRGF0YVNldD4=";
             // 
             // SelectPlainInAirportA
             // 
@@ -99,5 +114,6 @@
         private DevExpress.XtraGrid.Views.Grid.GridView gridView1;
         private DevExpress.DataAccess.Sql.SqlDataSource sqlDataSource1;
         private DevExpress.XtraGrid.Columns.GridColumn colPlaneName;
+        private DevExpress.DataAccess.Sql.SqlDataSource sqlDataSource2;
     }
 }

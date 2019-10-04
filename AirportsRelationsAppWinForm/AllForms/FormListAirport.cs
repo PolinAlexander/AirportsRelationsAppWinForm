@@ -34,6 +34,7 @@ namespace AirportsRelationsAppWinForm
             var pilot = xpCollection1.OfType<Pilot>().FirstOrDefault(n => n.ToString() == namePilot);
             airport.Pilots.Add(pilot);
             xpCollection1.Add(airport);
+            session1.Save(airport);
             MessageBox.Show($"Added new airport - {airport.AirportName}");
 
         }

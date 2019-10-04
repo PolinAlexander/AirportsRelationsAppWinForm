@@ -31,7 +31,6 @@
             this.components = new System.ComponentModel.Container();
             this.dataLayoutControl1 = new DevExpress.XtraDataLayout.DataLayoutControl();
             this.gridControl1 = new DevExpress.XtraGrid.GridControl();
-            this.xpInstantFeedbackSource2 = new DevExpress.Xpo.XPInstantFeedbackSource(this.components);
             this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.colAirportName = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colPilots = new DevExpress.XtraGrid.Columns.GridColumn();
@@ -64,6 +63,10 @@
             this.barButtonItem3 = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem4 = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem5 = new DevExpress.XtraBars.BarButtonItem();
+            this.xpCollection1 = new DevExpress.Xpo.XPCollection(this.components);
+            this.session1 = new DevExpress.Xpo.Session(this.components);
+            this.xpCollection2 = new DevExpress.Xpo.XPCollection(this.components);
+            this.xpCollection3 = new DevExpress.Xpo.XPCollection(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.dataLayoutControl1)).BeginInit();
             this.dataLayoutControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).BeginInit();
@@ -71,6 +74,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.mainRibbonControl)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.xpCollection1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.session1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.xpCollection2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.xpCollection3)).BeginInit();
             this.SuspendLayout();
             // 
             // dataLayoutControl1
@@ -87,7 +94,7 @@
             // 
             // gridControl1
             // 
-            this.gridControl1.DataSource = this.xpInstantFeedbackSource2;
+            this.gridControl1.DataSource = this.xpInstantFeedbackSource1;
             this.gridControl1.Location = new System.Drawing.Point(6, 6);
             this.gridControl1.MainView = this.gridView1;
             this.gridControl1.MenuManager = this.mainRibbonControl;
@@ -96,12 +103,6 @@
             this.gridControl1.TabIndex = 4;
             this.gridControl1.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView1});
-            // 
-            // xpInstantFeedbackSource2
-            // 
-            this.xpInstantFeedbackSource2.DefaultSorting = "AirportName ASC";
-            this.xpInstantFeedbackSource2.DisplayableProperties = "AirportName;Pilots;Planes";
-            this.xpInstantFeedbackSource2.ObjectType = typeof(AirportsRelationsApp.Module.BusinessObjects.Airport);
             // 
             // gridView1
             // 
@@ -388,6 +389,21 @@
             this.barButtonItem5.ImageOptions.ImageUri.Uri = "Reset";
             this.barButtonItem5.Name = "barButtonItem5";
             // 
+            // xpCollection1
+            // 
+            this.xpCollection1.ObjectType = typeof(AirportsRelationsApp.Module.BusinessObjects.Airport);
+            this.xpCollection1.Session = this.session1;
+            // 
+            // xpCollection2
+            // 
+            this.xpCollection2.ObjectType = typeof(AirportsRelationsApp.Module.BusinessObjects.Pilot);
+            this.xpCollection2.Session = this.session1;
+            // 
+            // xpCollection3
+            // 
+            this.xpCollection3.ObjectType = typeof(AirportsRelationsApp.Module.BusinessObjects.Plane);
+            this.xpCollection3.Session = this.session1;
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 17F);
@@ -406,6 +422,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.mainRibbonControl)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.xpCollection1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.session1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.xpCollection2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.xpCollection3)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -442,11 +462,14 @@
         private DevExpress.XtraBars.SkinDropDownButtonItem skinDropDownButtonItem1;
         private DevExpress.XtraBars.BarButtonItem barButtonItem7;
         private DevExpress.XtraBars.BarButtonItem barButtonItem8;
-        private DevExpress.Xpo.XPInstantFeedbackSource xpInstantFeedbackSource2;
         private DevExpress.XtraBars.BarButtonItem barButtonItem9;
         private DevExpress.XtraBars.BarButtonItem barButtonItem10;
         private DevExpress.XtraBars.BarButtonItem barButtonItem11;
         private DevExpress.XtraBars.BarButtonItem barButtonItem12;
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup2;
+        private DevExpress.Xpo.XPCollection xpCollection1;
+        private DevExpress.Xpo.XPCollection xpCollection2;
+        private DevExpress.Xpo.XPCollection xpCollection3;
+        private DevExpress.Xpo.Session session1;
     }
 }

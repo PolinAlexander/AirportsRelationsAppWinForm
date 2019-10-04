@@ -21,7 +21,7 @@ namespace AirportsRelationsAppWinForm
         {
             if (e.Value != null && dataGridView1.Columns[e.ColumnIndex].Name.Equals("planeNameDataGridViewTextBoxColumn"))
             {
-                if (e.Value.ToString().Contains('A')) { e.CellStyle.ForeColor = Color.Green; }
+                if (e.Value.ToString().Contains('a')) { e.CellStyle.ForeColor = Color.Green; }
             }
         }
         public FormListPlane()
@@ -62,10 +62,9 @@ namespace AirportsRelationsAppWinForm
                 }
                 plane.PlaneName = planeName;
                 xpCollection1.Add(plane);
+                session1.Save(plane);
                 MessageBox.Show($"Added new pilot - {plane.PlaneName}");
             }
-
         }
-
     }
 }
