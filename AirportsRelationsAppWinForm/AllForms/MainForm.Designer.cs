@@ -31,7 +31,7 @@
             this.components = new System.ComponentModel.Container();
             this.dataLayoutControl1 = new DevExpress.XtraDataLayout.DataLayoutControl();
             this.gridControl1 = new DevExpress.XtraGrid.GridControl();
-            this.xpInstantFeedbackSource1 = new DevExpress.Xpo.XPInstantFeedbackSource(this.components);
+            this.xpInstantFeedbackSource2 = new DevExpress.Xpo.XPInstantFeedbackSource(this.components);
             this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.colAirportName = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colPilots = new DevExpress.XtraGrid.Columns.GridColumn();
@@ -50,11 +50,17 @@
             this.skinDropDownButtonItem1 = new DevExpress.XtraBars.SkinDropDownButtonItem();
             this.barButtonItem7 = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem8 = new DevExpress.XtraBars.BarButtonItem();
+            this.barButtonItem9 = new DevExpress.XtraBars.BarButtonItem();
+            this.barButtonItem10 = new DevExpress.XtraBars.BarButtonItem();
+            this.barButtonItem11 = new DevExpress.XtraBars.BarButtonItem();
+            this.barButtonItem12 = new DevExpress.XtraBars.BarButtonItem();
             this.mainRibbonPage = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.mainRibbonPageGroup = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonPageGroup1 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
+            this.ribbonPageGroup2 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.layoutControlGroup1 = new DevExpress.XtraLayout.LayoutControlGroup();
             this.layoutControlItem1 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.xpInstantFeedbackSource1 = new DevExpress.Xpo.XPInstantFeedbackSource(this.components);
             this.barButtonItem3 = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem4 = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem5 = new DevExpress.XtraBars.BarButtonItem();
@@ -81,7 +87,7 @@
             // 
             // gridControl1
             // 
-            this.gridControl1.DataSource = this.xpInstantFeedbackSource1;
+            this.gridControl1.DataSource = this.xpInstantFeedbackSource2;
             this.gridControl1.Location = new System.Drawing.Point(6, 6);
             this.gridControl1.MainView = this.gridView1;
             this.gridControl1.MenuManager = this.mainRibbonControl;
@@ -91,11 +97,11 @@
             this.gridControl1.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView1});
             // 
-            // xpInstantFeedbackSource1
+            // xpInstantFeedbackSource2
             // 
-            this.xpInstantFeedbackSource1.DefaultSorting = "AirportName ASC";
-            this.xpInstantFeedbackSource1.DisplayableProperties = "AirportName;Pilots;Planes";
-            this.xpInstantFeedbackSource1.ObjectType = typeof(AirportsRelationsApp.Module.BusinessObjects.Airport);
+            this.xpInstantFeedbackSource2.DefaultSorting = "AirportName ASC";
+            this.xpInstantFeedbackSource2.DisplayableProperties = "AirportName;Pilots;Planes";
+            this.xpInstantFeedbackSource2.ObjectType = typeof(AirportsRelationsApp.Module.BusinessObjects.Airport);
             // 
             // gridView1
             // 
@@ -104,7 +110,11 @@
             this.colPilots,
             this.colPlanes});
             this.gridView1.GridControl = this.gridControl1;
+            this.gridView1.GroupSummary.AddRange(new DevExpress.XtraGrid.GridSummaryItem[] {
+            new DevExpress.XtraGrid.GridGroupSummaryItem(DevExpress.Data.SummaryItemType.None, "AirportName", null, "")});
             this.gridView1.Name = "gridView1";
+            this.gridView1.SortInfo.AddRange(new DevExpress.XtraGrid.Columns.GridColumnSortInfo[] {
+            new DevExpress.XtraGrid.Columns.GridColumnSortInfo(this.colAirportName, DevExpress.Data.ColumnSortOrder.Descending)});
             // 
             // colAirportName
             // 
@@ -151,10 +161,14 @@
             this.barButtonItem6,
             this.skinDropDownButtonItem1,
             this.barButtonItem7,
-            this.barButtonItem8});
+            this.barButtonItem8,
+            this.barButtonItem9,
+            this.barButtonItem10,
+            this.barButtonItem11,
+            this.barButtonItem12});
             this.mainRibbonControl.Location = new System.Drawing.Point(0, 0);
             this.mainRibbonControl.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.mainRibbonControl.MaxItemId = 17;
+            this.mainRibbonControl.MaxItemId = 21;
             this.mainRibbonControl.Name = "mainRibbonControl";
             this.mainRibbonControl.Pages.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPage[] {
             this.mainRibbonPage});
@@ -165,9 +179,11 @@
             // 
             // bbiSave
             // 
-            this.bbiSave.Caption = "Save";
+            this.bbiSave.Caption = "SELECT Airports";
             this.bbiSave.Id = 2;
+            this.bbiSave.ImageOptions.Image = global::AirportsRelationsAppWinForm.Properties.Resources.add_16x16;
             this.bbiSave.ImageOptions.ImageUri.Uri = "Save";
+            this.bbiSave.ImageOptions.LargeImage = global::AirportsRelationsAppWinForm.Properties.Resources.add_32x32;
             this.bbiSave.Name = "bbiSave";
             // 
             // bbiSaveAndClose
@@ -255,11 +271,48 @@
             this.barButtonItem8.Name = "barButtonItem8";
             this.barButtonItem8.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.BarButtonItem8_ItemClick);
             // 
+            // barButtonItem9
+            // 
+            this.barButtonItem9.Caption = "Select Всех Аэропортов";
+            this.barButtonItem9.Id = 17;
+            this.barButtonItem9.ImageOptions.Image = global::AirportsRelationsAppWinForm.Properties.Resources.add_16x161;
+            this.barButtonItem9.ImageOptions.LargeImage = global::AirportsRelationsAppWinForm.Properties.Resources.add_32x321;
+            this.barButtonItem9.Name = "barButtonItem9";
+            this.barButtonItem9.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.BarButtonItem9_ItemClick);
+            // 
+            // barButtonItem10
+            // 
+            this.barButtonItem10.Caption = "Select Пилотов Аэропорта А";
+            this.barButtonItem10.Id = 18;
+            this.barButtonItem10.ImageOptions.Image = global::AirportsRelationsAppWinForm.Properties.Resources.add_16x162;
+            this.barButtonItem10.ImageOptions.LargeImage = global::AirportsRelationsAppWinForm.Properties.Resources.add_32x322;
+            this.barButtonItem10.Name = "barButtonItem10";
+            this.barButtonItem10.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.BarButtonItem10_ItemClick);
+            // 
+            // barButtonItem11
+            // 
+            this.barButtonItem11.Caption = "Select Самолетов аэропорта A";
+            this.barButtonItem11.Id = 19;
+            this.barButtonItem11.ImageOptions.Image = global::AirportsRelationsAppWinForm.Properties.Resources.add_16x163;
+            this.barButtonItem11.ImageOptions.LargeImage = global::AirportsRelationsAppWinForm.Properties.Resources.add_32x323;
+            this.barButtonItem11.Name = "barButtonItem11";
+            this.barButtonItem11.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.BarButtonItem11_ItemClick);
+            // 
+            // barButtonItem12
+            // 
+            this.barButtonItem12.Caption = "GenerateDB";
+            this.barButtonItem12.Id = 20;
+            this.barButtonItem12.ImageOptions.Image = global::AirportsRelationsAppWinForm.Properties.Resources.editdatasource_16x16;
+            this.barButtonItem12.ImageOptions.LargeImage = global::AirportsRelationsAppWinForm.Properties.Resources.editdatasource_32x32;
+            this.barButtonItem12.Name = "barButtonItem12";
+            this.barButtonItem12.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.BarButtonItem12_ItemClick);
+            // 
             // mainRibbonPage
             // 
             this.mainRibbonPage.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
             this.mainRibbonPageGroup,
-            this.ribbonPageGroup1});
+            this.ribbonPageGroup1,
+            this.ribbonPageGroup2});
             this.mainRibbonPage.MergeOrder = 0;
             this.mainRibbonPage.Name = "mainRibbonPage";
             this.mainRibbonPage.Text = "Home";
@@ -267,12 +320,9 @@
             // mainRibbonPageGroup
             // 
             this.mainRibbonPageGroup.AllowTextClipping = false;
-            this.mainRibbonPageGroup.ItemLinks.Add(this.bbiSave);
-            this.mainRibbonPageGroup.ItemLinks.Add(this.bbiSaveAndClose);
-            this.mainRibbonPageGroup.ItemLinks.Add(this.bbiSaveAndNew);
-            this.mainRibbonPageGroup.ItemLinks.Add(this.bbiReset);
-            this.mainRibbonPageGroup.ItemLinks.Add(this.bbiDelete);
-            this.mainRibbonPageGroup.ItemLinks.Add(this.bbiClose);
+            this.mainRibbonPageGroup.ItemLinks.Add(this.barButtonItem9);
+            this.mainRibbonPageGroup.ItemLinks.Add(this.barButtonItem10);
+            this.mainRibbonPageGroup.ItemLinks.Add(this.barButtonItem11);
             this.mainRibbonPageGroup.Name = "mainRibbonPageGroup";
             this.mainRibbonPageGroup.ShowCaptionButton = false;
             this.mainRibbonPageGroup.Text = "Tasks";
@@ -285,6 +335,12 @@
             this.ribbonPageGroup1.ItemLinks.Add(this.barButtonItem8);
             this.ribbonPageGroup1.Name = "ribbonPageGroup1";
             this.ribbonPageGroup1.Text = "Lists";
+            // 
+            // ribbonPageGroup2
+            // 
+            this.ribbonPageGroup2.ItemLinks.Add(this.barButtonItem12);
+            this.ribbonPageGroup2.Name = "ribbonPageGroup2";
+            this.ribbonPageGroup2.Text = "ribbonPageGroup2";
             // 
             // layoutControlGroup1
             // 
@@ -304,6 +360,12 @@
             this.layoutControlItem1.Size = new System.Drawing.Size(912, 600);
             this.layoutControlItem1.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem1.TextVisible = false;
+            // 
+            // xpInstantFeedbackSource1
+            // 
+            this.xpInstantFeedbackSource1.DefaultSorting = "AirportName ASC";
+            this.xpInstantFeedbackSource1.DisplayableProperties = "AirportName;Pilots;Planes";
+            this.xpInstantFeedbackSource1.ObjectType = typeof(AirportsRelationsApp.Module.BusinessObjects.Airport);
             // 
             // barButtonItem3
             // 
@@ -380,5 +442,11 @@
         private DevExpress.XtraBars.SkinDropDownButtonItem skinDropDownButtonItem1;
         private DevExpress.XtraBars.BarButtonItem barButtonItem7;
         private DevExpress.XtraBars.BarButtonItem barButtonItem8;
+        private DevExpress.Xpo.XPInstantFeedbackSource xpInstantFeedbackSource2;
+        private DevExpress.XtraBars.BarButtonItem barButtonItem9;
+        private DevExpress.XtraBars.BarButtonItem barButtonItem10;
+        private DevExpress.XtraBars.BarButtonItem barButtonItem11;
+        private DevExpress.XtraBars.BarButtonItem barButtonItem12;
+        private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup2;
     }
 }

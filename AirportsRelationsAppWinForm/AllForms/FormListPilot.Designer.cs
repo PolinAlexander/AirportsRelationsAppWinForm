@@ -29,24 +29,22 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            DevExpress.XtraEditors.TableLayout.ItemTemplateBase itemTemplateBase1 = new DevExpress.XtraEditors.TableLayout.ItemTemplateBase();
-            DevExpress.XtraEditors.TableLayout.TableColumnDefinition tableColumnDefinition1 = new DevExpress.XtraEditors.TableLayout.TableColumnDefinition();
-            DevExpress.XtraEditors.TableLayout.TableColumnDefinition tableColumnDefinition2 = new DevExpress.XtraEditors.TableLayout.TableColumnDefinition();
-            DevExpress.XtraEditors.TableLayout.TableColumnDefinition tableColumnDefinition3 = new DevExpress.XtraEditors.TableLayout.TableColumnDefinition();
-            DevExpress.XtraEditors.TableLayout.TemplatedItemElement templatedItemElement1 = new DevExpress.XtraEditors.TableLayout.TemplatedItemElement();
-            DevExpress.XtraEditors.TableLayout.TemplatedItemElement templatedItemElement2 = new DevExpress.XtraEditors.TableLayout.TemplatedItemElement();
-            DevExpress.XtraEditors.TableLayout.TemplatedItemElement templatedItemElement3 = new DevExpress.XtraEditors.TableLayout.TemplatedItemElement();
-            DevExpress.XtraEditors.TableLayout.TableRowDefinition tableRowDefinition1 = new DevExpress.XtraEditors.TableLayout.TableRowDefinition();
-            DevExpress.XtraEditors.TableLayout.TableRowDefinition tableRowDefinition2 = new DevExpress.XtraEditors.TableLayout.TableRowDefinition();
             this.insertSimpleButton = new DevExpress.XtraEditors.SimpleButton();
             this.modifySimpleButton = new DevExpress.XtraEditors.SimpleButton();
             this.DeleteSimpleButton = new DevExpress.XtraEditors.SimpleButton();
-            this.listBox1 = new DevExpress.XtraEditors.ListBoxControl();
-            this.session1 = new DevExpress.Xpo.Session(this.components);
             this.xpCollection1 = new DevExpress.Xpo.XPCollection(this.components);
-            ((System.ComponentModel.ISupportInitialize)(this.listBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.session1)).BeginInit();
+            this.session1 = new DevExpress.Xpo.Session(this.components);
+            this.gridControl1 = new DevExpress.XtraGrid.GridControl();
+            this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
+            this.unitOfWork1 = new DevExpress.Xpo.UnitOfWork(this.components);
+            this.xpServerCollectionSource1 = new DevExpress.Xpo.XPServerCollectionSource(this.components);
+            this.colPilotName = new DevExpress.XtraGrid.Columns.GridColumn();
             ((System.ComponentModel.ISupportInitialize)(this.xpCollection1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.session1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.unitOfWork1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.xpServerCollectionSource1)).BeginInit();
             this.SuspendLayout();
             // 
             // insertSimpleButton
@@ -74,65 +72,62 @@
             this.DeleteSimpleButton.TabIndex = 2;
             this.DeleteSimpleButton.Text = "Delete";
             // 
-            // listBox1
-            // 
-            this.listBox1.DataSource = this.xpCollection1;
-            this.listBox1.DisplayMember = "Planes.This";
-            this.listBox1.ItemHeight = 75;
-            this.listBox1.Location = new System.Drawing.Point(13, 13);
-            this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(774, 388);
-            this.listBox1.TabIndex = 3;
-            itemTemplateBase1.Columns.Add(tableColumnDefinition1);
-            itemTemplateBase1.Columns.Add(tableColumnDefinition2);
-            itemTemplateBase1.Columns.Add(tableColumnDefinition3);
-            templatedItemElement1.FieldName = "PilotName";
-            templatedItemElement1.ImageOptions.ImageAlignment = DevExpress.XtraEditors.TileItemContentAlignment.MiddleCenter;
-            templatedItemElement1.ImageOptions.ImageScaleMode = DevExpress.XtraEditors.TileItemImageScaleMode.ZoomInside;
-            templatedItemElement1.Text = "PilotName";
-            templatedItemElement1.TextAlignment = DevExpress.XtraEditors.TileItemContentAlignment.MiddleCenter;
-            templatedItemElement2.ColumnIndex = 1;
-            templatedItemElement2.FieldName = "Planes.This";
-            templatedItemElement2.ImageOptions.ImageAlignment = DevExpress.XtraEditors.TileItemContentAlignment.MiddleCenter;
-            templatedItemElement2.ImageOptions.ImageScaleMode = DevExpress.XtraEditors.TileItemImageScaleMode.ZoomInside;
-            templatedItemElement2.Text = "Planes.This";
-            templatedItemElement2.TextAlignment = DevExpress.XtraEditors.TileItemContentAlignment.MiddleCenter;
-            templatedItemElement3.ColumnIndex = 2;
-            templatedItemElement3.FieldName = "countPlanes";
-            templatedItemElement3.ImageOptions.ImageAlignment = DevExpress.XtraEditors.TileItemContentAlignment.MiddleCenter;
-            templatedItemElement3.ImageOptions.ImageScaleMode = DevExpress.XtraEditors.TileItemImageScaleMode.ZoomInside;
-            templatedItemElement3.RowIndex = 1;
-            templatedItemElement3.Text = "countPlanes";
-            templatedItemElement3.TextAlignment = DevExpress.XtraEditors.TileItemContentAlignment.MiddleCenter;
-            itemTemplateBase1.Elements.Add(templatedItemElement1);
-            itemTemplateBase1.Elements.Add(templatedItemElement2);
-            itemTemplateBase1.Elements.Add(templatedItemElement3);
-            itemTemplateBase1.Name = "template1";
-            tableRowDefinition1.Length.Value = 19D;
-            tableRowDefinition2.Length.Value = 40D;
-            itemTemplateBase1.Rows.Add(tableRowDefinition1);
-            itemTemplateBase1.Rows.Add(tableRowDefinition2);
-            this.listBox1.Templates.Add(itemTemplateBase1);
-            // 
             // xpCollection1
             // 
             this.xpCollection1.ObjectType = typeof(AirportsRelationsApp.Module.BusinessObjects.Pilot);
             this.xpCollection1.Session = this.session1;
+            // 
+            // gridControl1
+            // 
+            this.gridControl1.DataSource = this.xpServerCollectionSource1;
+            this.gridControl1.Location = new System.Drawing.Point(13, 12);
+            this.gridControl1.MainView = this.gridView1;
+            this.gridControl1.Name = "gridControl1";
+            this.gridControl1.Size = new System.Drawing.Size(774, 391);
+            this.gridControl1.TabIndex = 3;
+            this.gridControl1.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
+            this.gridView1});
+            // 
+            // gridView1
+            // 
+            this.gridView1.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
+            this.colPilotName});
+            this.gridView1.GridControl = this.gridControl1;
+            this.gridView1.Name = "gridView1";
+            // 
+            // xpServerCollectionSource1
+            // 
+            this.xpServerCollectionSource1.DefaultSorting = "Airport ASC";
+            this.xpServerCollectionSource1.DisplayableProperties = "PilotName;Airport;Planes";
+            this.xpServerCollectionSource1.ObjectType = typeof(AirportsRelationsApp.Module.BusinessObjects.Pilot);
+            this.xpServerCollectionSource1.Session = this.unitOfWork1;
+            // 
+            // colPilotName
+            // 
+            this.colPilotName.FieldName = "PilotName";
+            this.colPilotName.MinWidth = 25;
+            this.colPilotName.Name = "colPilotName";
+            this.colPilotName.Visible = true;
+            this.colPilotName.VisibleIndex = 0;
+            this.colPilotName.Width = 94;
             // 
             // FormListPilot
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.listBox1);
+            this.Controls.Add(this.gridControl1);
             this.Controls.Add(this.DeleteSimpleButton);
             this.Controls.Add(this.modifySimpleButton);
             this.Controls.Add(this.insertSimpleButton);
             this.Name = "FormListPilot";
             this.Text = "List Pilots";
-            ((System.ComponentModel.ISupportInitialize)(this.listBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.session1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.xpCollection1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.session1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.unitOfWork1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.xpServerCollectionSource1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -142,8 +137,12 @@
         private DevExpress.XtraEditors.SimpleButton insertSimpleButton;
         private DevExpress.XtraEditors.SimpleButton modifySimpleButton;
         private DevExpress.XtraEditors.SimpleButton DeleteSimpleButton;
-        private DevExpress.XtraEditors.ListBoxControl listBox1;
         private DevExpress.Xpo.XPCollection xpCollection1;
         private DevExpress.Xpo.Session session1;
+        private DevExpress.XtraGrid.GridControl gridControl1;
+        private DevExpress.Xpo.XPServerCollectionSource xpServerCollectionSource1;
+        private DevExpress.Xpo.UnitOfWork unitOfWork1;
+        private DevExpress.XtraGrid.Views.Grid.GridView gridView1;
+        private DevExpress.XtraGrid.Columns.GridColumn colPilotName;
     }
 }
