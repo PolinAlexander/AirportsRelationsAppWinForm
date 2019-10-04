@@ -98,10 +98,11 @@
             templatedItemElement2.Text = "Planes.This";
             templatedItemElement2.TextAlignment = DevExpress.XtraEditors.TileItemContentAlignment.MiddleCenter;
             templatedItemElement3.ColumnIndex = 2;
-            templatedItemElement3.FieldName = "This";
+            templatedItemElement3.FieldName = "countPlanes";
             templatedItemElement3.ImageOptions.ImageAlignment = DevExpress.XtraEditors.TileItemContentAlignment.MiddleCenter;
             templatedItemElement3.ImageOptions.ImageScaleMode = DevExpress.XtraEditors.TileItemImageScaleMode.ZoomInside;
-            templatedItemElement3.Text = "This";
+            templatedItemElement3.RowIndex = 1;
+            templatedItemElement3.Text = "countPlanes";
             templatedItemElement3.TextAlignment = DevExpress.XtraEditors.TileItemContentAlignment.MiddleCenter;
             itemTemplateBase1.Elements.Add(templatedItemElement1);
             itemTemplateBase1.Elements.Add(templatedItemElement2);
@@ -112,7 +113,6 @@
             itemTemplateBase1.Rows.Add(tableRowDefinition1);
             itemTemplateBase1.Rows.Add(tableRowDefinition2);
             this.listBox1.Templates.Add(itemTemplateBase1);
-            this.listBox1.ValueMember = "Planes.This.Count()";
             // 
             // xpCollection1
             // 

@@ -29,15 +29,15 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            DevExpress.XtraEditors.TableLayout.ItemTemplateBase itemTemplateBase1 = new DevExpress.XtraEditors.TableLayout.ItemTemplateBase();
             this.insertSimpleButton = new DevExpress.XtraEditors.SimpleButton();
             this.modifySimpleButton = new DevExpress.XtraEditors.SimpleButton();
             this.DeleteSimpleButton = new DevExpress.XtraEditors.SimpleButton();
-            this.listBox1 = new DevExpress.XtraEditors.ListBoxControl();
             this.session1 = new DevExpress.Xpo.Session(this.components);
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.planeNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.xpCollection1 = new DevExpress.Xpo.XPCollection(this.components);
-            ((System.ComponentModel.ISupportInitialize)(this.listBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.session1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.xpCollection1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -57,6 +57,7 @@
             this.modifySimpleButton.Size = new System.Drawing.Size(94, 29);
             this.modifySimpleButton.TabIndex = 1;
             this.modifySimpleButton.Text = "Modify";
+            this.modifySimpleButton.Click += new System.EventHandler(this.ModifySimpleButton_Click);
             // 
             // DeleteSimpleButton
             // 
@@ -66,19 +67,31 @@
             this.DeleteSimpleButton.TabIndex = 2;
             this.DeleteSimpleButton.Text = "Delete";
             // 
-            // listBox1
+            // dataGridView1
             // 
-            this.listBox1.ItemHeight = 16;
-            this.listBox1.Location = new System.Drawing.Point(13, 13);
-            this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(774, 388);
-            this.listBox1.TabIndex = 3;
-            itemTemplateBase1.Name = "template1";
-            this.listBox1.Templates.Add(itemTemplateBase1);
+            this.dataGridView1.AutoGenerateColumns = false;
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.planeNameDataGridViewTextBoxColumn});
+            this.dataGridView1.DataSource = this.xpCollection1;
+            this.dataGridView1.Location = new System.Drawing.Point(13, 13);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.RowHeadersWidth = 51;
+            this.dataGridView1.RowTemplate.Height = 24;
+            this.dataGridView1.Size = new System.Drawing.Size(774, 390);
+            this.dataGridView1.TabIndex = 3;            
+            // 
+            // planeNameDataGridViewTextBoxColumn
+            // 
+            this.planeNameDataGridViewTextBoxColumn.DataPropertyName = "PlaneName";
+            this.planeNameDataGridViewTextBoxColumn.HeaderText = "PlaneName";
+            this.planeNameDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.planeNameDataGridViewTextBoxColumn.Name = "planeNameDataGridViewTextBoxColumn";
+            this.planeNameDataGridViewTextBoxColumn.Width = 125;
             // 
             // xpCollection1
             // 
-            this.xpCollection1.ObjectType = typeof(AirportsRelationsApp.Module.BusinessObjects.Airport);
+            this.xpCollection1.ObjectType = typeof(AirportsRelationsApp.Module.BusinessObjects.Plane);
             this.xpCollection1.Session = this.session1;
             // 
             // FormListPlane
@@ -86,14 +99,16 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.listBox1);
+            this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.DeleteSimpleButton);
             this.Controls.Add(this.modifySimpleButton);
             this.Controls.Add(this.insertSimpleButton);
+            this.ForeColor = System.Drawing.Color.Black;
             this.Name = "FormListPlane";
-            this.Text = "List Airports";
-            ((System.ComponentModel.ISupportInitialize)(this.listBox1)).EndInit();
+            this.Text = "List Planes";
+            this.Load += new System.EventHandler(this.FormListPlane_Load);
             ((System.ComponentModel.ISupportInitialize)(this.session1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.xpCollection1)).EndInit();
             this.ResumeLayout(false);
 
@@ -104,8 +119,9 @@
         private DevExpress.XtraEditors.SimpleButton insertSimpleButton;
         private DevExpress.XtraEditors.SimpleButton modifySimpleButton;
         private DevExpress.XtraEditors.SimpleButton DeleteSimpleButton;
-        private DevExpress.XtraEditors.ListBoxControl listBox1;
         private DevExpress.Xpo.XPCollection xpCollection1;
         private DevExpress.Xpo.Session session1;
+        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn planeNameDataGridViewTextBoxColumn;
     }
 }

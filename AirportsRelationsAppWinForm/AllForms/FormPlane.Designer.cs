@@ -159,12 +159,12 @@
 
         private DevExpress.XtraEditors.SimpleButton okButton;
         private DevExpress.XtraEditors.SimpleButton cancelButtom;
-        private DevExpress.XtraEditors.TextEdit textEdit1;
-        private DevExpress.XtraEditors.ComboBoxEdit comboBoxEdit1;
-        private DevExpress.XtraEditors.ComboBoxEdit comboBoxEdit2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private DevExpress.XtraEditors.GroupControl groupControl1;
+        protected internal DevExpress.XtraEditors.TextEdit textEdit1;
+        protected internal DevExpress.XtraEditors.ComboBoxEdit comboBoxEdit1;
+        protected internal DevExpress.XtraEditors.ComboBoxEdit comboBoxEdit2;
     }
 }
