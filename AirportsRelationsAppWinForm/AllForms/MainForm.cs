@@ -272,6 +272,12 @@ namespace AirportsRelationsAppWinForm.AllForms
             Pilot pilot98 = new Pilot(session1); pilot98.PilotName = "pilot98";
             Pilot pilot99 = new Pilot(session1); pilot99.PilotName = "pilot99";
             Pilot pilot100 = new Pilot(session1); pilot100.PilotName = "pilot100";
+            Pilot pilot101 = new Pilot(session1); pilot101.PilotName = "pilot101";
+            Pilot pilot102 = new Pilot(session1); pilot102.PilotName = "pilot102";
+            Pilot pilot103 = new Pilot(session1); pilot103.PilotName = "pilot103";
+            Pilot pilot104 = new Pilot(session1); pilot104.PilotName = "pilot104";
+            Pilot pilot105 = new Pilot(session1); pilot105.PilotName = "pilot105";
+            Pilot pilot106 = new Pilot(session1); pilot106.PilotName = "pilot106";
             Plane plane1 = new Plane(session1); plane1.PlaneName = "plane1";
             Plane plane2 = new Plane(session1); plane2.PlaneName = "plane2";
             Plane plane3 = new Plane(session1); plane3.PlaneName = "plane3";
@@ -372,6 +378,13 @@ namespace AirportsRelationsAppWinForm.AllForms
             Plane plane98 = new Plane(session1); plane98.PlaneName = "plane98";
             Plane plane99 = new Plane(session1); plane99.PlaneName = "plane99";
             Plane plane100 = new Plane(session1); plane100.PlaneName = "plane100";
+            Plane plane101 = new Plane(session1); plane101.PlaneName = "samplane101";
+            Plane plane102 = new Plane(session1); plane102.PlaneName = "samplane102";
+            Plane plane103 = new Plane(session1); plane103.PlaneName = "samplane103";
+            Plane plane104 = new Plane(session1); plane104.PlaneName = "samplane104";
+            Plane plane105 = new Plane(session1); plane105.PlaneName = "samplane105";
+            Plane plane106 = new Plane(session1); plane106.PlaneName = "samplane106";
+
             airport1.Pilots.AddRange(new List<Pilot> { pilot1, pilot2, pilot38, pilot17 });
             airport5.Pilots.AddRange(new List<Pilot> { pilot10, pilot17, pilot18, pilot20, pilot30 });
             airport15.Pilots.AddRange(new List<Pilot> { pilot10, pilot27, pilot18, pilot50, pilot32 });
@@ -385,14 +398,23 @@ namespace AirportsRelationsAppWinForm.AllForms
             plane1.Pilots.AddRange(new List<Pilot> { pilot8, pilot11, pilot20, pilot35, pilot42, pilot52, pilot54, pilot63, pilot88, pilot85, pilot100 });
             plane8.Pilots.AddRange(new List<Pilot> { pilot5, pilot19, pilot10, pilot45, pilot32, pilot52, pilot54, pilot73, pilot89, pilot100 });
             plane88.Pilots.AddRange(new List<Pilot> { pilot2, pilot13, pilot11, pilot40, pilot38, pilot58, pilot52, pilot73, pilot79, pilot99 });
+            plane101.Pilots.AddRange(new List<Pilot> { pilot101, pilot102, pilot100 });
+            plane102.Pilots.AddRange(new List<Pilot> { pilot101, pilot102, pilot100 });
+            plane103.Pilots.AddRange(new List<Pilot> { pilot101, pilot102, pilot100 });
+            plane104.Pilots.AddRange(new List<Pilot> { pilot101, pilot102, pilot100 });
+            plane105.Pilots.AddRange(new List<Pilot> { pilot101, pilot102, pilot100 });
+            plane106.Pilots.AddRange(new List<Pilot> { pilot101, pilot102, pilot100 });
 
             pilot42.Planes.AddRange(new List<Plane> { plane3, plane53, plane13, plane8, plane7, plane10, plane9, plane37, plane49, plane52, plane87, plane92, plane93 });
             pilot32.Planes.AddRange(new List<Plane> { plane3, plane5, plane11, plane8, plane9, plane10, plane19, plane37, plane40, plane53, plane87, plane92, plane93 });
             pilot19.Planes.AddRange(new List<Plane> { plane8, plane53, plane19, plane8, plane88, plane10, plane9, plane37, plane43, plane51, plane87, plane90, plane83 });
-
+            pilot101.Planes.AddRange(new List<Plane> { plane101, plane102, plane103 });
+            pilot102.Planes.AddRange(new List<Plane> { plane104, plane106, plane103 });
+            pilot103.Planes.AddRange(new List<Plane> { plane104, plane106, plane103 });
+            pilot104.Planes.AddRange(new List<Plane> { plane104, plane106, plane103 });
             session1.Save(new List<Airport> { airport1, airport2, airport3, airport4, airport5, airport6, airport7, airport8, airport9, airport10, airport11, airport12, airport13, airport14, airport15, airport16, airport17, airport18, airport19, airport20, airport21, airport22, airport23, airport24, airport25, airport26, airport27, airport28, airport29, airport30, airport31, airport32, airport33, airport34, airport35, airport36, airport37, airport38, airport39, airport40, airport41, airport42, airport43, airport44, airport45, airport46, airport47, airport48, airport49, airport50, airport51, airport52, airport53, airport54, airport55, airport56, airport57, airport58, airport59, airport60, airport61, airport62, airport63, airport64, airport65, airport66, airport67, airport68, airport69, airport70, airport71, airport72, airport73, airport74, airport75, airport76, airport77, airport78, airport79, airport80, airport81, airport82, airport83, airport84, airport85, airport86, airport87, airport88, airport89, airport90, airport91, airport92, airport93, airport94, airport95, airport96, airport97, airport98, airport99, airport100 });
-            session1.Save(new List<Plane> { plane1, plane2, plane3, plane4, plane5, plane6, plane7, plane8, plane9, plane10, plane11, plane12, plane13, plane14, plane15, plane16, plane17, plane18, plane19, plane20, plane21, plane22, plane23, plane24, plane25, plane26, plane27, plane28, plane29, plane30, plane31, plane32, plane33, plane34, plane35, plane36, plane37, plane38, plane39, plane40, plane41, plane42, plane43, plane44, plane45, plane46, plane47, plane48, plane49, plane50, plane51, plane52, plane53, plane54, plane55, plane56, plane57, plane58, plane59, plane60, plane61, plane62, plane63, plane64, plane65, plane66, plane67, plane68, plane69, plane70, plane71, plane72, plane73, plane74, plane75, plane76, plane77, plane78, plane79, plane80, plane81, plane82, plane83, plane84, plane85, plane86, plane87, plane88, plane89, plane90, plane91, plane92, plane93, plane94, plane95, plane96, plane97, plane98, plane99, plane100 });
-            session1.Save(new List<Pilot> { pilot1, pilot2, pilot3, pilot4, pilot5, pilot6, pilot7, pilot8, pilot9, pilot10, pilot11, pilot12, pilot13, pilot14, pilot15, pilot16, pilot17, pilot18, pilot19, pilot20, pilot21, pilot22, pilot23, pilot24, pilot25, pilot26, pilot27, pilot28, pilot29, pilot30, pilot31, pilot32, pilot33, pilot34, pilot35, pilot36, pilot37, pilot38, pilot39, pilot40, pilot41, pilot42, pilot43, pilot44, pilot45, pilot46, pilot47, pilot48, pilot49, pilot50, pilot51, pilot52, pilot53, pilot54, pilot55, pilot56, pilot57, pilot58, pilot59, pilot60, pilot61, pilot62, pilot63, pilot64, pilot65, pilot66, pilot67, pilot68, pilot69, pilot70, pilot71, pilot72, pilot73, pilot74, pilot75, pilot76, pilot77, pilot78, pilot79, pilot80, pilot81, pilot82, pilot83, pilot84, pilot85, pilot86, pilot87, pilot88, pilot89, pilot90, pilot91, pilot92, pilot93, pilot94, pilot95, pilot96, pilot97, pilot98, pilot99, pilot100 });
+            session1.Save(new List<Plane> { plane1, plane2, plane3, plane4, plane5, plane6, plane7, plane8, plane9, plane10, plane11, plane12, plane13, plane14, plane15, plane16, plane17, plane18, plane19, plane20, plane21, plane22, plane23, plane24, plane25, plane26, plane27, plane28, plane29, plane30, plane31, plane32, plane33, plane34, plane35, plane36, plane37, plane38, plane39, plane40, plane41, plane42, plane43, plane44, plane45, plane46, plane47, plane48, plane49, plane50, plane51, plane52, plane53, plane54, plane55, plane56, plane57, plane58, plane59, plane60, plane61, plane62, plane63, plane64, plane65, plane66, plane67, plane68, plane69, plane70, plane71, plane72, plane73, plane74, plane75, plane76, plane77, plane78, plane79, plane80, plane81, plane82, plane83, plane84, plane85, plane86, plane87, plane88, plane89, plane90, plane91, plane92, plane93, plane94, plane95, plane96, plane97, plane98, plane99, plane100, plane101, plane102, plane103, plane104, plane105, plane106 });
+            session1.Save(new List<Pilot> { pilot1, pilot2, pilot3, pilot4, pilot5, pilot6, pilot7, pilot8, pilot9, pilot10, pilot11, pilot12, pilot13, pilot14, pilot15, pilot16, pilot17, pilot18, pilot19, pilot20, pilot21, pilot22, pilot23, pilot24, pilot25, pilot26, pilot27, pilot28, pilot29, pilot30, pilot31, pilot32, pilot33, pilot34, pilot35, pilot36, pilot37, pilot38, pilot39, pilot40, pilot41, pilot42, pilot43, pilot44, pilot45, pilot46, pilot47, pilot48, pilot49, pilot50, pilot51, pilot52, pilot53, pilot54, pilot55, pilot56, pilot57, pilot58, pilot59, pilot60, pilot61, pilot62, pilot63, pilot64, pilot65, pilot66, pilot67, pilot68, pilot69, pilot70, pilot71, pilot72, pilot73, pilot74, pilot75, pilot76, pilot77, pilot78, pilot79, pilot80, pilot81, pilot82, pilot83, pilot84, pilot85, pilot86, pilot87, pilot88, pilot89, pilot90, pilot91, pilot92, pilot93, pilot94, pilot95, pilot96, pilot97, pilot98, pilot99, pilot100, pilot101, pilot102, pilot103, pilot104, pilot105, pilot106 });
         }
 
             #endregion
@@ -443,7 +465,8 @@ namespace AirportsRelationsAppWinForm.AllForms
 
         private void BarButtonItem14_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-
+            SelectPilotFromPlaneS ssp = new SelectPilotFromPlaneS();
+            ssp.Show();
         }
 
         private void BarButtonItem15_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
